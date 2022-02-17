@@ -22,6 +22,8 @@ export function AuthProvider(props) {
     setIsAuth("null");
   };
 
+  // is user authenticated
+
   const value = { isAuth: !isAuth || isAuth === "null" ? false : true, login, logout };
 
   return <AuthContext.Provider value={value}>{props.children}</AuthContext.Provider>;
