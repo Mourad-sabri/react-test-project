@@ -1,70 +1,29 @@
-# Getting Started with Create React App
+### run ``npm install` and `npm start`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Questions
 
-## Available Scripts
+# 1 ) difference between Functional components and Class components
 
-In the project directory, you can run:
+difference between function components and class components is that function components its' just plan stateless javascript function that use hooks to mange component lifecycle (used before hooks only to render the jsx), while class components also known as statful wich can use all react lifecycle method because they implement logic and state
 
-### `npm start`
+# 2 ) rule of hooks
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+hooks cannot be called inside loops, conditions, or nested functions
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+hooks can be call only from react function components
 
-### `npm test`
+# 3 ) useEffect
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+useEffect work just like componentDidMount or componentDidUpdate in class components
 
-### `npm run build`
+it manage side effects like fetching data or changing dom in components
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+by using it react will kown that he need to perform something after the components render or update by checking the dependency
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+note ::: useEffect run every time in the first render
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# 3 ) why state instead of variables
 
-### `npm run eject`
+we use state instead of variables to react kep the app sync with the ui view
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+exemple :: when you click on Button in count app react will update tha value of the count and re-render the view while if we use the variable it' will change the value in the memory only
