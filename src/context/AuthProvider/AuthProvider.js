@@ -22,7 +22,7 @@ export function AuthProvider(props) {
     setIsAuth("null");
   };
 
-  const value = { isAuth: isAuth === "null" ? false : true, login, logout };
+  const value = { isAuth: !isAuth || isAuth === "null" ? false : true, login, logout };
 
   return <AuthContext.Provider value={value}>{props.children}</AuthContext.Provider>;
 }
